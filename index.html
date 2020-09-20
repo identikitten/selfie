@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+        <!-- libreria de ambientes -->
+    
+        <script src="https://cdn.rawgit.com/donmccurdy/aframe-physics-system/v4.0.1/dist/aframe-physics-system.min.js"></script>
+       
+
+
+</head>
+
+
+
+<body>
+    
+        
+
+
+    <a-assets>
+        <video id="quartz" autoplay loop="true" src="quartz.mp4"> </video>
+        <img id="selfie2" src="Foti.jpeg">
+        <img id="texture" src="texture.png">
+        <audio id="fuego" src="wind.mp3" preload="auto"></audio>
+        <video id="selfie-scroll" autoplay loop="true" src="selfiescroll.mp4"></video>
+        <video id="ensayo" autoplay loop="true" src="ensayo.mp4"></video>
+        <a-asset-item id="optimerBoldFont" src="Solide.json"></a-asset-item>
+        <img src="grad3.png" id="chrome" crossorigin="anonymous">
+        <img id="stomach" src="stomach.jpg">
+        <img id="torso" src="torso.jpg">
+        <img id="grad4" src="grad4.png">
+        <img id="grad5" src="grad5.png">
+        <img id="grad6" src="grad6.png">
+        <img id="grad7" src="grad7.png">
+        <img id="clouds" src="nubes.jpeg"></img-id>
+      </a-assets>
+    
+<!--<a-scene fog="type:  exponential;  color:  #d0b9b9;  density:  0.02;  far:  999.3;  near:  0">-->
+    
+   <a-scene>
+
+    <!--Entity-->
+
+    <a-entity sound="src:#fuego; autoplay: true" position=" 1 2 3"></a-entity>
+    <!-- AMBIENTE -->
+   
+   <!---
+    <a-entity light="intensity: 1; type: ambient" position="0 9.339 -14.594"></a-entity>
+    <a-entity light="type: point" position="-1.781 6.624 -7.408" scale="1 1 -1.4"></a-entity>
+   -->
+
+    
+    <!--Values-->
+
+   
+  
+   
+    <a-entity position="-7.12 -25.14 -9.01" scale="0.43 0.46 0.84" text-geometry="value: nada nunca se va a parecer a esto; 
+    bevelEnabled: true; bevelSize: 0.1; bevelThickness: 0.1; curveSegments: 1; size: 1.5; height: 0.5" 
+    material="color: pink; metalness: 0.9; roughness: 0.05; sphericalEnvMap:#chrome" rotation="100 0 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 40000"></a-entity>
+    <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-box position="5 0 0" src="#torso" color="#E83A00"></a-box>
+</a-entity>
+
+
+    <a-box src="foti.jpeg" position="-0.22 2.8 -1.6" rotation="0 45 8" color="#B3477D" 
+    animation="property:  position; loop: true; to:  -0.22 4.2 -1.8;  dur:  9000;  easing:  easeInSine;  elasticity:  200;  
+    from:  -0.22 1.8 -1.6;  startEvents:  ;  pauseEvents:  ;  resumeEvents:  "
+    ></a-box>
+    <a-plane src="ensayo.mp4" width="10" height="10" color="#5E5EF0" rotation="-90 0 0"></a-plane>
+    <a-cylinder width="3" height="2" color="#FDF1C7"  position="-0.22 0.94 -2.55" scale="0.84 0.73 -2"></a-cylinder>
+
+    <a-sphere src="devotion.png" animation="property: rotation; to: 0 360 0; loop: true; dur: 15000" radius="2" color="pink" position="0 2 6.2" transparent=true opacity=0.9></a-sphere>
+
+    <a-sky src="#grad4" color="pink"></a-sky> 
+    <a-cone radius-bottom="1" radius-top="1" color="#7BBD9C" position="-0.22 5.08 -2" rotation="5 5 -2"></a-cone>
+    <a-tetrahedron src="selfie.jpeg" color="#EC3818" radius="5" material="" geometry="" 
+    scale="-0.2 0.18 0.08" rotation="50 50 50" position="-3.62 4.42 0.01"></a-tetrahedron>
+    <a-torus color="pink" arc="270" radius="5" radius-tubular="0.1"></a-torus>
+    <a-video color="pink" src="selfiescroll.mp4" material="color: #d5445c" geometry="" 
+    scale="2.51 4.07 0.00001" position="2.99 5.57 -0.56" rotation="-1.2 0 -0.13"></a-video>
+    
+      
+
+      
+
+     
+</a-scene>
+
+</body>
+
+<!-- PRIMERA SESION
+<body>
+    <a-scene>
+
+        <a-assets>
+            <img id="ladrillo" src="words.PNG">
+            <audio id="fuego" src="avemaria.mp3" preload="auto"></audio>
+            <video id="baile" src="writing.mp4" autoplay loop="true"></video>
+        </a-assets>
+
+        <a-entity sound="src:#fuego; autoplay: true" position=" 1 2 3"></a-entity>
+
+        <a-video src="#baile" width="1" height="2" position="0 0 -4" scale="2.929 1 1"></a-video>
+
+        <a-image scale="10 10 10" rotation="90 0 0 " color="yellow"
+            animation=
+            "property:scale;
+            to:2 2 2;
+            dur: 2000;
+            loop:true;
+            dir: alternate"
+            
+            animation__color=
+            "property:color;
+            to :#4CC3D9;
+            dur:2000;
+            loop:true;
+            dir:alternate;"></a-image>
+    </a-scene>
+
+</body>
+-->
+
+
+</html>
